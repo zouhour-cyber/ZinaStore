@@ -22,10 +22,8 @@ a{
 .iconav{
    width:30px;
    text-decoration: none;
-   
+   color:rgb(66, 66, 66);
 
-   
-    
 }
 
 
@@ -438,7 +436,7 @@ footer a:hover{
    text-align: center;
    line-height: 30px;
   
-   margin-right: 5px;
+   margin-right: 10px;
    color: var(--doré);
    border: 1px solid var(--doré);
 
@@ -508,6 +506,8 @@ footer a:hover{
 
     .cart-row {
       display: flex;
+      justify-content: center;
+     
   }
     /*----------style card sign in modal-----------*/
     .form-label-group {
@@ -538,3 +538,36 @@ footer a:hover{
     .card-signin .card-body {
       padding: 2rem;
     }
+
+
+    body.dark-theme{
+      background-color: var(--noir) ;
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+      color:white;
+     
+  }
+
+
+  /*------------style bouton back to top---------*/
+.back-to-top {
+   z-index: 2; }
+   .back-to-top .btn-dark {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     padding: 0;
+     position: fixed;
+     bottom: 40px;
+     right: 20px;
+     background: #2e2e2e;
+     border-color: #2e2e2e;
+     z-index: 999;
+     transition: all 1s linear; }
+     
+     .back-to-top .btn-dark:hover {
+       cursor: pointer;
+       background: #5fad7d;
+       transform: translateY(-15px );
+     }
