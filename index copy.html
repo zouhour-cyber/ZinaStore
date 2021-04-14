@@ -22,7 +22,7 @@
 <body>
     
 
-    <nav class="navbar sticky-top navbar-expand-lg  navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg  navbar-light bg-light">
         <a class="navbar-brand" href="index copy.html">
             <img src="image/logo_zina_blanc-removebg-preview.png"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,7 @@
 
 
      
-        <div class="form-group has-search col-6 mx-auto">
+        <div class="form-group has-search col-md-6 col-12 mx-auto">
           
             <span class="fa fa-search form-control-feedback"></span>
             <input type="text" class="form-control box" placeholder="Rechercher un produit">
@@ -66,18 +66,253 @@
             </div>
           <ul class="navbar-nav item1">
             <li class="nav-item">
-             
+            
               <a   class="nav-link" href="" data-toggle="modal" data-target="#connexion" > <img src="image/user (1).png" class="iconav" ></img></a>
-    
+           
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href=""> <img src="image/heart.png" class="iconav"> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="panier.html" ><img src="image/panier.png" class="iconav"></a>
+            <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
 
-            </li>
-          </ul>
+                      <div class="modal-header text-center">
+
+                          <ul class="nav nav-pills p-3" id="pills-tab" role="tablist">
+                              <li class="nav-item">
+                                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Connexion</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Inscription</a>
+                              </li>
+                          </ul>
+
+                          <button type="button" class="close" data-dismiss="modal" aria-label="close">&times;</button>
+                      </div>
+            <!--------------------------------------modal body---------------------------------------------->
+                      <div class="modal-body">
+                          <div class="tab-content" id="pills-tabContent">
+                              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"> 
+         <!----------------------------------début connexion ---------------------------------------------->
+                                  <div class="row">
+                                    <div class="col-sm-12 mx-auto">
+                                      <div class="card card-signin">
+                                        <div class="card-body">
+                                          <h5 class="card-title text-center"> Connexion</h5>
+                                          <form class="needs-validation" novalidate>
+                                            <div class="form-label-group">
+                                              <input type="email" id="inputEmail" class="form-control" placeholder="Adresse e-mail" required autofocus>
+                                              <label for="inputEmail"></label>
+                                              <div class="invalid-feedback">
+                                                Merci de saisir votre adresse e-mail
+                                              </div>
+                                              <div class="valid-feedback">
+                                                Champs valide
+                                              </div>
+                                            </div>
+                              
+                                            <div class="form-label-group">
+                                              <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                                              <label for="inputPassword"> </label>
+                                              <div class="invalid-feedback">
+                                                Merci de saisir votre mot de passe
+                                              </div>
+                                              <div class="valid-feedback">
+                                                Champs valide
+                                              </div>
+                                            </div>
+                              
+                                            <div class="custom-control custom-checkbox mb-3">
+                                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                              <label class="custom-control-label" for="customCheck1">se rappeler du mot de passe</label>
+                                            </div>
+                                            <button class="btn btn-warning btn-block text-uppercase font-weight-bold border-radius mt-1rem" type="submit" > connexion</button>
+                                            <hr class="my-4 mx-auto"> 
+                                            
+                                             <p class=text-center> se connecter avec </p>
+                                  
+                                          <div class="d-flex justify-content-center">
+                                            <button class="btn  btn-google" type="submit"><i class="fa fa-google"></i> </button>
+                                            <button class="btn  btn-facebook" type="submit"><i class="fa fa-facebook-f"></i> </button>
+                                          </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--------------------------------------fin connexion ---------------------------------------->
+                             
+                              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <!--------------------------------------début  inscription ------------------------------------->
+                                <div class="row">
+                                  <div class="col-sm-12 mx-auto">
+                                    <div class="card card-signin">
+                                      <div class="card-body">
+                                        <h5 class="card-title text-center"> Inscription</h5>
+                                        <form class="needs-validation" novalidate>
+                                          <div class="form-label-group">
+                                            <input type="text" id="nomprénom" class="form-control" placeholder="Nom et prénom" required autofocus>
+                                            <div class="invalid-feedback">
+                                              Merci de saisir votre Nom et prénom
+                                            </div>
+                                            <div class="valid-feedback">
+                                              Champs valide
+                                            </div>
+                                          </div>
+
+                                          <div class="form-label-group">
+                                            <input type="email" id="inputEmail" class="form-control" placeholder="Adresse e-mail" required autofocus>
+                                            <div class="invalid-feedback">
+                                              Merci de saisir votre adresse e-mail
+                                            </div>
+                                            <div class="valid-feedback">
+                                              Champs valide
+                                            </div>
+                                          </div>
+                            
+                                          <div class="form-label-group">
+                                            <input type="password" id="inputPassword" class="form-control" placeholder="mot de passe" required>
+                                            <div class="invalid-feedback">
+                                              Merci de saisir votre mot de passe
+                                            </div>
+                                            <div class="valid-feedback">
+                                              Champs valide
+                                            </div>
+                                          </div>
+                                         
+                                          <div class="custom-control custom-checkbox mb-4">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">se rappeler du mot de passe</label>
+                                          </div>
+                                          <button class="btn my-3 btn-warning btn-block text-uppercase font-weight-bold" type="submit"> s'inscrire </button>
+                                          <hr class="my-2"> 
+                                          
+                                           <p class=text-center> s'inscrire avec </p>
+                                           <div class="d-flex justify-content-center">
+                                          <button class="btn  btn-google" type="submit"><i class="fa fa-google"></i> </button>
+                                          <button class="btn  btn-facebook" type="submit"><i class="fa fa-facebook-f"></i> </button>
+                                        </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+   <!----------------------------------------------fin inscription------------------------------------------->
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+            <li class="nav-item">
+              <a class="nav-link" href=""> <img src="image/heart.png" class="iconav"> <span class="badge badge-danger rounded-circle">0</span>
+               </a>
+    
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" data-toggle="modal" data-target="#monpanier" > 
+              <img src="image/panier.png" class="iconav">
+              <span id="panier" class="badge  badge-danger rounded-circle"> 0</span>
+            </a>
+          </span> 
+
+        </li>
+      </ul> 
+              
+              <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="monpanier" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container panier my-5">
+          <h3 class="mb-3"> Mon panier</h3>
+          <div class="table-responsive">
+              <table class="table  show-cart">
+                 
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Article</th>
+                      <th scope="col">Prix</th>
+                      <th scope="col">Quantité</th>
+                      <th scope="col">Sous-total</th>
+                      <th scope="col">Action</th>
+
+                    </tr>
+                  </thead>
+                  <tbody class="cart-items">
+                  - <tr class="cart-row">
+                      <th scope="row" ><img src="image/ringemeraude.jpg" class="img-fluid imgArticle"></th>
+                      <td class="cart-item">Bague</td>
+                      <td class="cart-price"> 1000 TDN </td> 
+
+                      <td > <input class=" cart-quantity-input justify-content-center"  type="number" class="form-control" id="qty" value="1"> </td>
+                
+                      <td class="cart-sous-total">1000 TDN  </td> 
+
+                      <td class="trash"> <a href="#" class="btn btn-sm ">
+                          <i class="fa fa-trash"></i>
+                        </a>  </td>
+
+                    </tr>
+                    <tr class="cart-row">
+                      <th scope="row"><img src="image/bracelet2.jpg" class="img-fluid imgArticle"></th>
+                      <td class="cart-item"> Bracelets</td>
+                      <td class="cart-price">100 TDN</td>
+                      <td > <input class=" cart-quantity-input justify-content-center"  type="number" class="form-control" id="qty" value="1"> </td>
+                     
+                      <td class="cart-sous-total"> 100 TDN </td>
+                      <td class="trash"> <a href="#" class="btn btn-sm">
+                        <i class="fa fa-trash"></i>
+                      </a>  </td>
+                    </tr> 
+                    
+                  </tbody>
+                </table>
+                
+            </div>
+
+        
+
+
+      <div class="table-footer row justify-content-end">
+
+        <div class="col-12 d-flex justify-content-end">
+           <h5 >Total: <span class="cart-total-price">  </span> TDN</h5> </div>
+           <div class=" col-12 d-flex justify-content-end mt-3">
+          <a href=""> <button type="button" class="btn btn-dark remove" >Vider le panier</button> </a>
+          <a href=""> <button type="button" class="btn btn-warning">Finaliser ma commande </button> 
+          </a> 
+      </div>
+    </div>
+  </div>
+      <table class="show-cart table">
+    
+      </table>
+
+
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+               
          
         </div>
      
@@ -99,33 +334,33 @@
 <div class="justify-content-between">
 
         <div class="row">
-          <div class="col-md-3 col-sm-10">
+          <div class="col-md-3 col-12 d-flex justify-content-center">
             <!-- Section: Sidebar  filter-->
  
      <!-- Section: Categorie -->
-     <div class="filter mx-5 text-center">
+     <div class="filter mx-5">
 
-       <h5 class="font-weight-bold mb-3">Catégories</h5>
+       <h5 class="font-weight-bold mb-4">Catégories</h5>
  
        <div class="form-check pl-0 mb-3">
          <input type="checkbox" class="form-check-input filled-in" id="new">
-         <label class="form-check-label small text-uppercase card-link-secondary" for="new">Bijoux </label>
+         <label class="form-check-label  card-link-secondary" for="new">Bijoux </label>
        </div>
        <div class="form-check pl-0 mb-3">
          <input type="checkbox" class="form-check-input filled-in" id="used">
-         <label class="form-check-label small text-uppercase card-link-secondary" for="used">Bagues </label>
+         <label class="form-check-label  card-link-secondary" for="used">Bagues </label>
        </div>
        <div class="form-check pl-0 mb-3">
          <input type="checkbox" class="form-check-input filled-in" id="collectible">
-         <label class="form-check-label small text-uppercase card-link-secondary" for="collectible">Colliers</label>
+         <label class="form-check-label  card-link-secondary" for="collectible">Colliers</label>
        </div>
        <div class="form-check pl-0 mb-3 pb-1">
          <input type="checkbox" class="form-check-input filled-in" id="renewed">
-         <label class="form-check-label small text-uppercase card-link-secondary" for="renewed">Montres</label>
+         <label class="form-check-label  card-link-secondary" for="renewed">Montres</label>
        </div>
        <div class="form-check pl-0 mb-3 pb-1">
            <input type="checkbox" class="form-check-input filled-in" id="renewed">
-           <label class="form-check-label small text-uppercase card-link-secondary" for="renewed">Cadeaux</label>
+           <label class="form-check-label  card-link-secondary" for="renewed">Cadeaux</label>
          </div>
          <h5 class="font-weight-bold mb-3">Prix</h5>
 
@@ -149,19 +384,7 @@
            <input type="radio" class="form-check-input" id="200above" name="materialExampleRadios">
            <label class="form-check-label small text-uppercase card-link-secondary" for="200above">$200 & Above</label>
          </div>
-         <form>
-           <div class="d-flex align-items-center mt-4 pb-1">
-             <div class="md-form md-outline my-0">
-               <input id="from" type="text" class="form-control mb-0">
-               <label for="form">$ Min</label>
-             </div>
-             <p class="px-2 mb-0 text-muted"> - </p>
-             <div class="md-form md-outline my-0">
-               <input id="to" type="text" class="form-control mb-0">
-               <label for="to">$ Max</label>
-             </div>
-           </div>
-         </form>
+        
    
      </div>
                    </div>
@@ -175,8 +398,8 @@
                                         <img class="pic-1" src="image/ringemeraude.jpg">
                                     </a>
                                     <ul class="product-links">
-                                        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                        <li><a href="#" data-tip="View details"><i class="fa fa-search"></i></a></li>
+                                        <li><a href="#" data-tip="Ajouter aux favoris"><i class="fas fa-heart"></i></a></li>
+                                        <li><a href="#" data-tip="Voir détails"><i class="fa fa-search"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product-content justify-content-center">
@@ -199,10 +422,9 @@
                                             <a href="#" class="image">
                                                 <img class="pic-1" src="image/bracelet2.jpg">
                                             </a>
-                                            <span class="product-discount-label">-33%</span>
                                             <ul class="product-links">
-                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                                <li><a href="#" data-tip="View details"><i class="fa fa-search"></i></a></li>
+                                                <li><a href="#" data-tip="Ajouter aux favoris"><i class="fas fa-heart"></i></a></li>
+                                                <li><a href="#" data-tip="Voir détails"><i class="fa fa-search"></i></a></li>
                                             </ul>
                                         </div>
                                         <div class="product-content justify-content-center">
@@ -219,16 +441,16 @@
                                         </div>
                                         </div> 
                                    </div>
-                                   <div class="col-md-4 col-9 d-flex justify-content-center">
+                                   <div class="col-md-4 col-12 d-flex justify-content-center">
                                       <div class="product-grid">
                                         <div class="product-image">
                                             <a href="#" class="image">
                                                 <img class="pic-1" src="image/bague3.jpg">
                                             </a>
-                                            <span class="product-discount-label">-33%</span>
+                                           
                                             <ul class="product-links">
-                                                <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                                <li><a href="#" data-tip="View details"><i class="fa fa-search"></i></a></li>
+                                                <li><a href="#" data-tip="Ajouter aux favoris"><i class="fas fa-heart"></i></a></li>
+                                                <li><a href="#" data-tip="Voir détails"><i class="fa fa-search"></i></a></li>
                                             </ul>
                                         </div>
                                         <div class="product-content justify-content-center">
@@ -249,17 +471,16 @@
                           </div> 
                           <div class="row my-5">
   
-                              <div class="col-md-4 col-9">
+                              <div class="col-md-4 col-12 d-flex justify-content-center">
                                   <div class="d-flex justify-content-center">
                             <div class="product-grid">
                             <div class="product-image">
                                 <a href="#" class="image">
                                     <img class="pic-1" src="image/montre1.jpg">
                                 </a>
-                                <span class="product-discount-label">-33%</span>
                                 <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li><a href="#" data-tip="View details"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Ajouter aux favoris"><i class="fas fa-heart"></i></a></li>
+                                    <li><a href="#" data-tip="Voir détails"><i class="fa fa-search"></i></a></li>
                                 </ul>
                             </div>
                             <div class="product-content">
@@ -277,7 +498,7 @@
                             </div> 
                                 </div>
                               </div>
-                            <div class="col-md-4 col-9">
+                            <div class="col-md-4 col-12 d-flex justify-content-center">
                               <div class="d-flex justify-content-center">
                     
                             <div class="product-grid">
@@ -285,10 +506,9 @@
                                   <a href="#" class="image">
                                       <img class="pic-1" src="image/collier.jpg">
                                   </a>
-                                  <span class="product-discount-label">-33%</span>
                                   <ul class="product-links">
-                                      <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                      <li><a href="#" data-tip="View details"><i class="fa fa-search"></i></a></li>
+                                      <li><a href="#" data-tip="Ajouter aux favoris"><i class="fas fa-heart"></i></a></li>
+                                      <li><a href="#" data-tip="Voir détails"><i class="fa fa-search"></i></a></li>
                                   </ul>
                               </div>
                               <div class="product-content">
@@ -300,24 +520,23 @@
                                       <li class="far fa-star"></li>
                                   </ul>
                                   <h3 class="title"><a href="#"></a> Collier</a></h3>
-                                  <div class="price"><span>$90.00</span> $66.00 TDN</div>
+                                  <div class="price">100.00 TDN</div>
                                   <a class="add-to-cart" href="#">add to cart</a>
                               </div>
                               </div> 
                                 </div>
                               </div>
                     
-                                <div class="col-md-4 col-9">
+                                <div class="col-md-4 col-12 d-flex justify-content-center">
                                   <div class="d-flex justify-content-center">
                                   <div class="product-grid" >
                                     <div class="product-image">
                                         <a href="#" class="image">
                                             <img class="pic-1" src="image/ringnoir.jpg">
                                         </a>
-                                        <span class="product-discount-label">-33%</span>
                                         <ul class="product-links">
-                                            <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                            <li><a href="#" data-tip="View details"><i class="fa fa-search"></i></a></li>
+                                            <li><a href="#" data-tip="Ajouter aux favoris"><i class="fas fa-heart"></i></a></li>
+                                            <li><a href="#" data-tip="Voir détails"><i class="fa fa-search"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="product-content justify-content-center">
@@ -328,8 +547,8 @@
                                             <li class="far fa-star"></li>
                                             <li class="far fa-star"></li>
                                         </ul>
-                                        <h3 class="title"><a href="#"></a> Marketing Digital</a></h3>
-                                        <div class="price"><span>$90.00</span> $66.00 TDN</div>
+                                        <h3 class="title"><a href="#"></a> Bague </a></h3>
+                                        <div class="price"> 66.00 TDN</div>
                                         <a class="add-to-cart" href="#">add to cart</a>
                                     </div>
                                     </div> 
@@ -346,7 +565,7 @@
   <div class="row d-flex justify-content-center">
     <div class="col-md-3 col-12">
  <img src="image/logoblack.png" class="logofooter mb-2" alt="">
- <h6 class="pt-2"> ZinaStore votre meilleur boutique de vente d' accessoires en ligne </h6>     
+ <h5 class="pt-2"> ZinaStore votre meilleur boutique de vente d' accessoires en ligne </h5>     
     </div>
     <div class="col-md-1">
 
@@ -355,7 +574,9 @@
 <h4> Liens utiles</h4>
 <a href=""> <h5> Nouveaux produits</h5> </a>
  <a  href=""> <h5> Nos offres</h5> </a>
-<a  href=""> <h5> Mon panier</h5> </a>
+ <a  href=""> <h5> Boutique</h5> </a>
+
+<a  href="panier.html"> <h5> Mon panier</h5> </a>
 
     </div>
 
@@ -374,8 +595,8 @@
     </div>
   
   </div>
-  <div class="footer-social-link my-3 col-10">
-    <h5 class="mb-3"> Suivez-nous </h5>
+  <div class="footer-social-link mt-5 col-12 d-flex ">
+    <h5 class="mb-5"> Suivez-nous </h5>
 
   <ul class="d-flex justify-content-center">
       <li>
@@ -407,12 +628,13 @@
   </div>
 </div>
 
-</div>
+
 
 <hr color="white">
 <div class="text-center">
-<h6>  <a href="index copy.html">  ZinaStore </a> © Copyright 2021
-</h6>
+<h5>  <a href="index copy.html">  ZinaStore </a> © Copyright 2021
+</h5>
+</div>
 </div>
 </footer>
 

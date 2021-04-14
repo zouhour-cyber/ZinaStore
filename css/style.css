@@ -20,11 +20,22 @@ a{
 }
 
 .iconav{
-   width:25px;
+   width:30px;
    text-decoration: none;
+   
+
+   
     
 }
 
+
+.badge{
+   margin-left:-0.6rem;
+   margin-top:-7px;
+   position: absolute;
+   padding:5spx;
+   font-size:1rem;
+}
 
 .nav-item .nav-link a .iconav:hover{
    color:var(--doré)!important;
@@ -48,7 +59,7 @@ a{
 
 .banner{
    margin-top:1px;
-   height: 540px;
+   height: 620px;
    background-image: url('../image/banner6.jpg'); 
    background-repeat: no-repeat;
    background-size: cover;
@@ -65,15 +76,27 @@ a{
    background-position: center;
   
 }
-/* .content h3{
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-   color:black;
-   font-weight: bold;
-   margin-left:10%;
-   padding-top:4%;
-} */
+
+/*--------stle filtre----*/
+.filter input [type="checkbox"]{
+width:2rem;
+   
+}
+
+.filter label{
+   font-size:20px !important;
+}
+.filter h5{
+   color:var(--doré);
+   font-weight: 600;
+   
+}
+
+
+
+
+
+
 .wishlist_cart {
    height: 90px
 }
@@ -180,10 +203,7 @@ footer .bs i{
 .navbar-nav .nav-item .nav-link a img:hover{
    color:var(--doré);
 }
-.search-box{
-  
-   border: 1px solid black;
-}
+
 
 footer .search-box{
    border-top-left-radius: 25px;
@@ -201,9 +221,13 @@ footer hr{
    outline: none;
    border-bottom-right-radius: 0px;
    border-bottom-left-radius:0px;
-   border-bottom: 2px solid black;
+   border-bottom: 3px solid black;
+  
+}
+.box:focus{
+   border-bottom: 4px solid var(--doré); 
    
-
+   
 }
 .box::placeholder{
    font-size:18px;
@@ -401,11 +425,11 @@ footer a:hover{
    color:var(--doré);
 }
 
-
+/*-style social links ----------*/
 .footer-social-link ul {
    list-style-type: none;}
  .footer-social-link li {
-   margin-right:5px;
+  
 
    display: inline-block; }
 .footer-social-link a i {
@@ -453,14 +477,64 @@ footer a:hover{
    width:auto;
    
    }
-
+   .imgArticle{
+      width:70px;
+      height:70px;
+   }
 
    #qty {
       display:inline;
-      width: 5rem;
+      width: 3rem;
       
       }
 
     .finaliser{
        background-color:var(--doré);
     }  
+
+
+
+    .panier{
+       margin-top:50px!important;
+       
+      
+    }
+    .panier h3{
+       color:var(--doré);
+       font-weight: 600;
+    }
+
+  
+
+    .cart-row {
+      display: flex;
+  }
+    /*----------style card sign in modal-----------*/
+    .form-label-group {
+      position: relative;
+      margin-bottom: 0.7rem;
+    }
+    .form-label-group>input, .form-control{
+      height: auto;
+      border-bottom:2px solid black;
+      border:none;
+      outline: none;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius:0px;
+      border-bottom: 3px solid black;
+   
+    } 
+
+    .form-label-group>input, .form-control::placeholder{
+       font-size:20px;
+       
+    }
+    .card-title {
+      font-weight: 300;
+      font-size: 1.5rem;
+      padding-bottom:1rem;
+    }
+    
+    .card-signin .card-body {
+      padding: 2rem;
+    }

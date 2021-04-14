@@ -23,10 +23,10 @@
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
-  --warning: #ffc107;
+  --warning:#EDA35B;
   --danger: #dc3545;
   --light: #f8f9fa;
-  --dark: #343a40;
+  --dark: black;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -1910,8 +1910,8 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #343a40;
-  border-color: #454d55;
+  background-color: black;
+  border-color: black;
 }
 
 .table .thead-light th {
@@ -2692,9 +2692,9 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning {
-  color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  color: black;
+  background-color: #EDA35B;
+  border-color:#EDA35B;
 }
 
 .btn-warning:hover {
@@ -2804,8 +2804,8 @@ fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: black;
+  border-color:black;
 }
 
 .btn-dark:hover {
@@ -4280,12 +4280,14 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link {
   border-radius: 0.25rem;
+  padding:0.5rem;
+  font-weight: 600;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #007bff;
+  color: var(--warning);
+  background-color: black;
 }
 
 .nav-fill > .nav-link,
