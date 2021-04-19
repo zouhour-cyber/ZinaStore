@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://fontawesome.com/icons/shopping-bag?style=solid">
     <link rel="shortcut icon" type="image/jpg" href="image/logo.png">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="js/bootstrap.js">
+    <script src="main.js" async> </script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="panier.js" async> </script>
+    <!-- <script src="panier.js" async> </script> -->
 
   
 
@@ -207,12 +207,12 @@
               </div>
             <li class="nav-item">
                 <a class="nav-link" href=""> <img src="image/heart.png" class="iconav">
-                  <span class="badge badge-danger rounded-circle">0</span>
+                  <span id="favorisnav" class="badge badge-danger rounded-circle">0</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="panier.html" ><img src="image/panier.png" class="iconav">
-                  <span id="panier" class="badge  badge-danger rounded-circle"> 0</span></a>
+                  <span id="paniernav" class="badge  badge-danger rounded-circle"> 0</span></a>
 
             </li>
           </ul>
@@ -222,73 +222,26 @@
      
           </nav>
 
-          
-
-            <div class="container panier my-5">
-                <h3 class="mb-3"> Mon panier</h3>
-                <div class="table-responsive">
-                    <table class="table  show-cart">
-                       
-                        <thead class="thead-dark">
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Article</th>
-                            <th scope="col">Prix</th>
-                            <th scope="col">Quantité</th>
-                            <th scope="col">Sous-total</th>
-                            <th scope="col">Action</th>
-
-                          </tr>
-                        </thead>
-                        <tbody class="cart-items">
-                        - <tr class="cart-row">
-                            <th scope="row" ><img src="image/ringemeraude.jpg" class="img-fluid imgArticle"></th>
-                            <td class="cart-item">Bague</td>
-                            <td class="cart-price"> 1000 TDN </td> 
-
-                            <td > <input class=" cart-quantity-input justify-content-center"  type="number" class="form-control" id="qty" value="1"> </td>
-                      
-                            <td class="cart-sous-total">1000 TDN  </td> 
-
-                            <td class="trash"> <a href="#" class="btn btn-sm ">
-                                <i class="fa fa-trash"></i>
-                              </a>  </td>
-
-                          </tr>
-                          <tr class="cart-row">
-                            <th scope="row"><img src="image/bracelet2.jpg" class="img-fluid imgArticle"></th>
-                            <td class="cart-item"> Bracelets</td>
-                            <td class="cart-price">100 TDN</td>
-                            <td > <input class=" cart-quantity-input justify-content-center"  type="number" class="form-control" id="qty" value="1"> </td>
-                           
-                            <td class="cart-sous-total"> 100 TDN </td>
-                            <td class="trash"> <a href="#" class="btn btn-sm">
-                              <i class="fa fa-trash"></i>
-                            </a>  </td>
-                          </tr> 
-                          
-                        </tbody>
-                      </table>
-                      
-                  </div>
-
+          <div class="container">
+          <div class="products-container mt-5 mx-auto text-center">
+            <h2>Mon panier</h2>
+            <div class="d-flex justify-content-around">
+              <div class="mt-5 product" ></div>
+              <div class="mt-5 name"><h5>Article</h5></div>
+              <div class="mt-5 price"><h5>Prix</h5></div>
+              <div class="mt-5 quantity"><h5>Quantité</h5></div>
+              <div class="mt-5 soustotal"><h5>Sous-Total</h5></div>
+              <div class="mt-5"><h5>Retirer</h5></div>
+            </div>
+            <hr>
+            <div class="prod"></div>
+          </div>
+        </div>
               
 
 
-            <div class="table-footer row justify-content-end">
 
-              <div class="col-12 d-flex justify-content-end">
-                 <h5 >Total: <span class="cart-total-price">  </span> TDN</h5> </div>
-                 <div class=" col-12 d-flex justify-content-end mt-3">
-                <a href=""> <button type="button" class="btn btn-dark remove" >Vider le panier</button> </a>
-                <a href=""> <button type="button" class="btn btn-warning">Finaliser ma commande </button> 
-                </a> 
-            </div>
-          </div>
-        </div>
-            <table class="show-cart table">
           
-            </table>
 
 
 
@@ -373,6 +326,7 @@
               
               </footer>
               
+              <link rel="stylesheet" href="js/bootstrap.js">
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
       </body>

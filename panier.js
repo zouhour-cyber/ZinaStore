@@ -1,5 +1,5 @@
 
-//Nightmode
+Nightmode
 
 //Récupérer le button nightmode
 let nightMode=document.getElementById('nightMode');
@@ -11,41 +11,8 @@ function tonight(){
 
     document.body.classList.toggle("dark-theme");
      }  
-    
-//loalstorage
 
-var cart = document.querySelectorAll('.add-to-cart')
-
-for(let i=0;i<cart.length;i++){
-    cart[i].addEventListener("click",()=>{
-    commande()
-  })
-}
-
-function onloadcartNumber(){
-  let local=localStorage.getItem("commande");
-  if (local){
-    document.getElementById('panier').textContent=1;
-  }
-} 
-onloadcartNumber()
-function commande(){
-    local=localStorage.getItem("commande")
-    local=parseInt(local);
-    if (local){
-      localStorage.setItem("commande",local+1)
-      document.getElementById('panier').textContent=local+1
-    }
-    else{
-        localStorage.setItem("commande",1)
-        document.getElementById('panier').textContent=1
-    }
-}
-
-
-
-
-//panier 
+// //panier 
 
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
@@ -67,14 +34,12 @@ document.getElementsByClassName('remove')[0].addEventListener('click', purchaseC
       var input = quantityInputs[i]
       input.addEventListener('change', quantityChanged)
   }
-
+//ajouter le produit au panier
   var addToCartButtons = document.getElementsByClassName('add-to-cart')
   for (var i = 0; i < addToCartButtons.length; i++) {
       var button = addToCartButtons[i]
       button.addEventListener('click', addToCartClicked)
   }
-
-
 }
 
 //suprimer tout le panier
@@ -127,21 +92,25 @@ function addItemToCart(title, price, imageSrc) {
           return
       }
   }
-  var cartRowContents = `
-  <tr class="cart-row">
-  <th scope="row"  ><img src=${imageSrc} class="imgArticle"></th>
-  <td class="cart-item">${title}</td>
-  <td class="cart-price"> ${price} </td> 
+  var cartRowContents=
+  `<div class="d-flex justify-content-between align-items-between rmv">
+  
+  <div class="product"> <img src="./image/${imageSrc}" style="width:70px"></div>
+  <div class="name my-auto"> <h4>${title}</h4></div>
 
-  <td > <input class=" cart-quantity-input justify-content-center"  type="number" class="form-control" id="qty" value="1"> </td>
+  <div class="price"> <p>${price},00 Dt</p></div>
+  <div class="quantity my-auto">
+  <input class=" cart-quantity-input justify-content-center"  type="number" class="form-control" id="qty" value="1">
+ </div>
+  <div class="soustotal"><p>${item.inCart*item.price},00 Dt</p></div>
+  <div><a  class="btn btn-sm trash "> <i class="fa fa-trash"></i>
+</a> </div>
+  
+  </div>
+  <hr>
+  `
+  
 
-  <td class="cart-sous-total"> </td> 
-
-  <td class="trash"> <a href="#" class="btn btn-sm ">
-      <i class="fa fa-trash"></i>
-    </a>  </td>
-
-</tr>`
   cartRow.innerHTML = cartRowContents
   cartItems.append(cartRow)
   cartRow.getElementsByClassName('trash')[0].addEventListener('click', removeCartItem)
@@ -168,7 +137,7 @@ function updateCartTotal() {
     total = total + (price * quantity)
   }
   total = Math.round(total * 100) / 100
-  document.getElementsByClassName('cart-total-price')[0].innerText =  total
+  document.getElementsByClassName('cart-total-price')[0].innerText = total
 }
 
 
