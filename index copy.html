@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="image/logo.png">
+   
     <script src="https://kit.fontawesome.com/e0d7e898b5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fontawesome.com/icons/shopping-bag?style=solid">
-    <link rel="shortcut icon" type="image/jpg" href="image/logo.png">
+   
+    <script src="panier.js" async> </script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="panier.js" async> </script> -->
-    <script src="darktheme.js" > </script>
+
+   
 
     <title>ZinaStore</title>
 </head>
 <body>
     
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index copy.html">
             <img src="image/logo_zina_blanc-removebg-preview.png"> </a>
@@ -28,31 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
        
           <div class="mt-3 mx-auto col-md-10 col-12 px-5">               
-           <!-- <form action="">
-                <div class="input-group border-light">
-                    <div class="input-group-prepend">
-                      <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         Toutes les catégories
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Montres</a>
-                          <a class="dropdown-item" href="#">Bijoux</a>
-                          <a class="dropdown-item" href="#">Sacs</a>
-                        </div>
-                      </div>
-                    </div>
-                    <input type="text" class="search-box" aria-label="Search input with dropdown button" placeholder="Rechercher un produits">
-                    <div class="input-group-append">
-                        <button class="bs" type="submit"> <i class="fa fa-search ml-2"> </i></button>
-                    </div>
-                </div>
-            </form>
-       -->
-    
-
-
-     
+        
         <div class="form-group has-search col-md-6 mx-md-auto col-12 ">
           
             <span class="fa fa-search form-control-feedback"></span>
@@ -61,7 +38,7 @@
        
             </div>
 
-          <ul class="navbar-nav item1">
+          <ul class="navbar-nav">
             <li class="nav-item">
             
               <a   class="nav-link" href="" data-toggle="modal" data-target="#connexion" > <img src="image/user (1).png" class="iconav" ></img></a>
@@ -208,14 +185,14 @@
     
               </li>
             <li class="nav-item">
-              <a class="nav-link" fref=""  href="panier.html" > 
+              <a class="nav-link" fref=""  data-toggle="modal" data-target="#monpanier" > 
               <img src="image/panier.png" class="iconav">
               <span id="paniernav" class="badge  badge-danger rounded-circle"> 0</span>
             </a>
           </span> 
 
         </li>
-         <div id="nightMode" > <a> <img src="image/moon.png" class="dark"> </a> </div>
+         <div id="nightMode" > <a > <img src="image/moon.png" class="dark"> </a> </div>
      
       </ul> 
     
@@ -233,25 +210,27 @@
         </button>
       </div>
       <div class="modal-body">
-      
-        <div class="container">
-          <div class="products-container mt-5">
-            <h2>Mon panier</h2>
-            <div class="d-flex justify-content-around">
-              <div class="mt-5 product" ></div>
-              <div class="mt-5 name"><h5>Article</h5></div>
-              <div class="mt-5 price"><h5>Prix</h5></div>
-              <div class="mt-5 quantity"><h5>Quantité</h5></div>
-              <div class="mt-5 soustotal"><h5>Sous-Total</h5></div>
-              <div class="mt-5"><h5>Retirer</h5></div>
-            </div>
-            <hr>
-            <div class="prod"></div>
+        <section class="container content-section">
+          <div class="cart-row mb-3">
+              <span class=" cart-column ">Article</span>
+              <span class=" cart-column prix">Prix</span>
+              <span class=" cart-column qte">	Quantité</span>
+              
           </div>
+          <div class="cart-items">
+            
+          </div>
+          <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price total">0 TND</span>
         </div>
-
+      </section>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark btn-purchase">Vider la panier</button>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Poursuire mes achats</button>
+       
       </div>
-  
+   
     </div>
   </div>
 </div>
@@ -263,8 +242,7 @@
           </nav>
 
             <div class="banner">
-          
-          
+         
             </div>
         
 
@@ -278,29 +256,29 @@
      <!-- Section: Categorie -->
      <div class="filter mx-5">
 
-       <h5 class="font-weight-bold mb-4">Filtrer par catégorie</h5>
+       <h6 class="mb-4">Filtrer par catégorie</h6>
  
        <div class="form-check pl-0 mb-3">
-         <input type="checkbox" name="fl-catégorie" value="bijoux" id="bijoux"  class="form-check-input filled-in" id="new">
+         <input type="checkbox" name="fl-catégorie" class="form-check-input filled-in" >
          <label class="form-check-label  card-link-secondary" for="new">Bijoux </label>
        </div>
        <div class="form-check pl-0 mb-3">
-         <input type="checkbox" name="fl-catégorie" value="bagues" id="bagues"  class="form-check-input filled-in" id="used">
+         <input type="checkbox" name="fl-catégorie" class="form-check-input filled-in">
          <label class="form-check-label  card-link-secondary" for="used">Bagues </label>
        </div>
        <div class="form-check pl-0 mb-3">
-         <input type="checkbox" name="fl-catégorie" value="Colliers" id="Colliers" class="form-check-input filled-in" id="collectible">
+         <input type="checkbox" name="fl-catégorie" class="form-check-input filled-in" >
          <label class="form-check-label  card-link-secondary" for="collectible">Colliers</label>
        </div>
        <div class="form-check pl-0 mb-3 pb-1">
-         <input type="checkbox" name="fl-catégorie" value="Montres" id="Montres" class="form-check-input filled-in" id="renewed">
+         <input type="checkbox" name="fl-catégorie" class="form-check-input filled-in" id="renewed">
          <label class="form-check-label  card-link-secondary" for="renewed">Montres</label>
        </div>
        <div class="form-check pl-0 mb-3 pb-1">
-           <input type="checkbox" name="fl-catégorie" value="Bracelet" id="Bracelet" class="form-check-input filled-in" id="renewed">
+           <input type="checkbox" class="form-check-input filled-in" >
            <label class="form-check-label  card-link-secondary" for="renewed">Cadeaux</label>
          </div>
-         <h5 class="font-weight-bold mb-3">Filtrer par prix</h5>
+         <h6 class="mb-3">Filtrer par prix</h6>
 
          <div class="form-check pl-0 mb-3">
            <input type="radio"  name="fl-prix" value="under50" id="under50" class="form-check-input" >
@@ -334,7 +312,7 @@
                                     </a>
                                     <ul class="product-links">
                                         <li><a class="add-favoris" data-tip="Ajouter aux favoris"><i class="fas fa-heart"></i></a></li>
-                                        <li><a class="add-cart" data-tip="Acheter"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a data-tip="Acheter"><i class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product-content justify-content-center">
@@ -345,9 +323,10 @@
                                     <li class="far fa-star"></li>
                                     <li class="far fa-star"></li>
                                 </ul>
-                                    <h3 data-id="bague" data-category="bagues"  class="title"><a href="#"></a> bague emeraude</a></h3>
+                                    <h3 class="title"><a href="#"></a> bague emeraude</a></h3>
                                     <div class="price">1000.00 TDN</div>
-                                    <a class="add-to-cart add-cart"  data-name="Bague ermaude" data-price="1000.00"href="#">add to cart</a>
+                                    <a class="add-to-cart" href="#" >add to cart
+                                    </a>
                                 </div>
                                 </div> 
                                   </div>
@@ -370,9 +349,9 @@
                                                 <li class="far fa-star"></li>
                                                 <li class="far fa-star"></li>
                                             </ul>
-                                            <h3 data-id="bracelet" data-category="Bracelet" class="title"><a href="#"></a> Bracelets</a></h3>
+                                            <h3 class="title"><a href="#"></a> Bracelets</a></h3>
                                             <div class="price"> 100 TDN</div>
-                                            <a class="add-to-cart add-cart" href="#" data-name="Bracelets" data-price="100" >add to cart</a>
+                                            <a class="add-to-cart" href="#" >add to cart</a>
                                         </div>
                                         </div> 
                                    </div>
@@ -396,9 +375,9 @@
                                                 <li class="far fa-star"></li>
                                                 <li class="far fa-star"></li>
                                             </ul>
-                                            <h3 data-id="bague" data-category="bagues" class="title"><a href="#"></a> Boucles d'oreilles</a></h3>
+                                            <h3 class="title"><a href="#"></a> Boucles d'oreilles</a></h3>
                                             <div class="price">400.000 DTN</div>
-                                            <a class="add-to-cart add-cart" href="#">add to cart</a>
+                                            <a class="add-to-cart" href="#">add to cart</a>
                                         </div>
                                         </div> 
                                    </div>
@@ -426,9 +405,9 @@
                                     <li class="far fa-star"></li>
                                     <li class="far fa-star"></li>
                                 </ul>
-                                <h3 data-id="bague" data-category="Montres"  class="title"><a href="#"></a> Montre femme</a></h3>
+                                <h3 class="title"><a href="#"></a> Montre femme</a></h3>
                                 <div class="price">160.000 TDN</div>
-                                <a class="add-to-cart add-cart" href="#">add to cart</a>
+                                <a class="add-to-cart" href="#">add to cart</a>
                             </div>
                             </div> 
                                 </div>
@@ -454,9 +433,9 @@
                                       <li class="far fa-star"></li>
                                       <li class="far fa-star"></li>
                                   </ul>
-                                  <h3  data-id="collier" data-category="Colliers" class="title"><a href="#"></a> Collier</a></h3>
+                                  <h3 class="title"><a href="#"></a> Collier</a></h3>
                                   <div class="price">100.00 TDN</div>
-                                  <a class="add-to-cart add-cart" href="#">add to cart</a>
+                                  <a class="add-to-cart " href="#">add to cart</a>
                               </div>
                               </div> 
                                 </div>
@@ -482,9 +461,9 @@
                                             <li class="far fa-star"></li>
                                             <li class="far fa-star"></li>
                                         </ul>
-                                        <h3  data-id="bague" data-category="bagues" class="title"><a href="#"></a> Bague </a></h3>
+                                        <h3 class="title"><a href="#"></a> Bague </a></h3>
                                         <div class="price"> 300.00 TDN</div>
-                                        <a class="add-to-cart add-cart" href="#">add to cart</a>
+                                        <a class="add-to-cart " href="#">add to cart</a>
                                     </div>
                                     </div> 
                                       </div>
@@ -500,25 +479,25 @@
   <div class="row d-flex justify-content-center">
     <div class="col-md-3 col-12">
  <img src="image/logoblack.png" class="logofooter mb-2" alt="">
- <h5 class="pt-2"> ZinaStore votre meilleur boutique de vente d' accessoires en ligne </h5>     
+ <p class="pt-2"> ZinaStore votre meilleur boutique de vente d' accessoires en ligne </p>     
     </div>
     <div class="col-md-1">
 
     </div>
     <div class="col-md-4 col-12">
-<h4> Liens utiles</h4>
-<a href=""> <h5> Nouveaux produits</h5> </a>
- <a  href=""> <h5> Nos offres</h5> </a>
- <a  href=""> <h5> Boutique</h5> </a>
+<h5> Liens utiles</h5>
+<a href=""> <h6> Nouveaux produits</h6> </a>
+ <a  href=""> <h6> Nos offres</h6> </a>
+ <a  href=""> <h6> Boutique</h6> </a>
 
-<a  href="panier.html"> <h5> Mon panier</h5> </a>
+<a  href="panier.html"> <h6> Mon panier</h6> </a>
 
     </div>
 
     <div class="col-md-4 col-12">
 
-      <h4> Newsletter </h4>
-      <h5>  Rejoignez-nous</h5>
+      <h5> Newsletter </h5>
+      <h6>  Rejoignez-nous</h6>
       <div class="row">
       <div class="col-12">
       <div class="input-group mt-3">
@@ -531,7 +510,7 @@
   
   </div>
   <div class="footer-social-link mt-5 col-12 d-flex ">
-    <h5 class="mb-5"> Suivez-nous </h5>
+    <h6 class="mb-5"> Suivez-nous </h6>
 
   <ul class="d-flex justify-content-center">
       <li>
@@ -567,14 +546,13 @@
 
 <hr color="white">
 <div class="text-center">
-<h5>  <a href="index copy.html">  ZinaStore </a> © Copyright 2021
-</h5>
+<h6>  <a href="index copy.html" style="color:var(--doré)">  ZinaStore </a> © Copyright 2021
+</h6>
 </div>
 </div>
 </footer>
-
- 
-<script src="main.js" > </script>
+      <script src="icone.js"> </script>
+     <script src="themedark.js"> </script>
       <link rel="stylesheet" href="js/bootstrap.js">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

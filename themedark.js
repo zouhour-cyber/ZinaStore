@@ -1,4 +1,4 @@
-Nightmode
+
 
 //Récupérer le button nightmode
 let nightMode=document.getElementById('nightMode');
@@ -10,4 +10,3 @@ function tonight(){
 
     document.body.classList.toggle("dark-theme");
      }  
-     

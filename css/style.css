@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap%27');
 
 :root{
    --noir:#161616;
@@ -11,7 +11,7 @@
 body{
 margin:0;
 padding:0;
-font-family: 'Work Sans', sans-serif;
+font-family: 'Recursive', serif;
 background-color:rgb(245, 244, 244) ;
 overflow-x: hidden;
 
@@ -21,7 +21,7 @@ a{
    text-decoration: none;
 }
 .navbar{
-   background-color: #f5f5f5;
+   background-color: var(--gris-clair);
 }
 .navbar-brand img{
    height:5rem;
@@ -66,11 +66,12 @@ a{
 
 .banner{
    margin-top:1px;
-   height: 620px;
-   background-image: url('../image/banner6.jpg'); 
+   height: 640px;
+   background-image: url('../image/accessoire.jpg') ;
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
+ 
    background-attachment: fixed;
    
    }
@@ -90,13 +91,16 @@ width:2rem;
    
 }
 
-.filter label{
-   font-size:20px !important;
-}
-.filter h5{
+.filter h6{
    color:var(--doré);
-   font-weight: 600;
+   font-weight: bold;
+  
    
+}
+.form-check .form-check-label{
+   font-size:16px !important;
+   margin:5px 0px;
+  
 }
 
 
@@ -170,7 +174,7 @@ footer hr{
    
 }
 .box::placeholder{
-   font-size:17px;
+   font-size:17px!important;
 }
 
   /*---------card product-----------*/
@@ -285,7 +289,6 @@ footer hr{
 .product-grid .rating .far{ color: #808080; }
 .product-grid .title{
    font-size: 18px;
-   font-weight: 600;
    text-transform: uppercase;
    margin: 0 0 15px;
 }
@@ -358,9 +361,9 @@ footer{
 
 }
 
-footer h4{
+footer h5{
    color:var(--doré);
-   font-weight: bold;
+  
 }
 footer a{
    color:white;
@@ -446,29 +449,34 @@ footer a:hover{
     }
     .panier h3{
        color:var(--doré);
-       font-weight: 600;
+       
     }
 
+    /* #inputnbr{
+      width: 50px;
+      margin-right: 5rem;
   
+  } */
+  .cart-item-image{
+      margin-left: 0rem;
+  }
 
 
-  .cart-row {
-   display: flex;
-   justify-content: space-between;
-}
+
 
 
 .cart-price {
-   width: 20%;
+   width: 200px;
    font-size: 1.2em;
    color: #333;
+   margin-left: 1rem;
 }
 
 .cart-quantity-input {
    height: 34px;
    width: 50px;
    border-radius: 5px;
-   border: 1px solid #56CCF2;
+   
    background-color: #eee;
    color: #333;
    padding: 0;
@@ -481,7 +489,7 @@ footer a:hover{
    color: #333;
    margin-left: .5em;
    font-size: 1.2em;
-}
+} 
 
 .cart-item-image {
    width: 75px;
@@ -591,7 +599,58 @@ footer a:hover{
       h3{
          font-size:18px;
       }
-      label .form-check-input{
+      .form-check .form-check-label{
          font-size:10px;
       }
     }
+
+
+    .img{
+       width:100px;
+       height:100px;
+    }
+
+ 
+
+    /*-----panier---*/
+    .cart-column {
+      display:inline-block;
+      padding-left: 5rem;
+      
+  }
+  
+
+
+.cart-total{
+   margin-left: 600px;
+   margin-bottom:1rem;
+}
+/* .cart-item{
+   width: 200px !important;
+} */
+.cart-column {
+   display:inline-block;
+   padding-left: 5rem;
+   
+}
+.prix{
+
+margin-left:10rem;
+width:6rem;
+
+}
+.qte{
+   padding-left: 6rem;
+   width:3rem;
+}
+.section-header{
+   padding-left: 5rem;
+}
+
+span.cart-item-title{
+   width: 50px !important;
+}
+
+.cart-row{
+   text-transform: capitalize;
+}
